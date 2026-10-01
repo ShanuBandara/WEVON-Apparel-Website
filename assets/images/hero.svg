@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#06111d"/><stop offset="1" stop-color="#10263b"/></linearGradient>
+  <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0f2740"/><stop offset="1" stop-color="#07111d"/></linearGradient>
+  <filter id="sh"><feDropShadow dx="0" dy="22" stdDeviation="26" flood-opacity=".42"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="1290" cy="140" r="280" fill="#e31b23" opacity=".09"/>
+<circle cx="1180" cy="740" r="360" fill="#f3ba2f" opacity=".05"/>
+<g transform="translate(780,30)" filter="url(#sh)">
+  <path d="M160 160 L320 80 L430 80 L590 160 L760 330 L625 455 L545 355 L545 790 L205 790 L205 355 L125 455 L-10 330 Z" fill="url(#shirt)"/>
+  <path d="M320 80 Q375 180 430 80" fill="none" stroke="#27435f" stroke-width="32"/>
+  <rect x="298" y="350" width="140" height="140" rx="28" fill="#e31b23"/>
+  <path d="M327 426 L361 386 L377 403 L395 369 L433 429 L398 456 L371 428 L345 457 Z" fill="#fff"/>
+</g>
+<text x="110" y="250" font-family="Arial" font-size="34" fill="#f3ba2f" letter-spacing="7">WEVON APPAREL</text>
+<text x="110" y="355" font-family="Arial" font-size="86" font-weight="700" fill="#fff">WE DESIGN.</text>
+<text x="110" y="448" font-family="Arial" font-size="86" font-weight="700" fill="#fff">WE PRODUCE.</text>
+<text x="110" y="541" font-family="Arial" font-size="86" font-weight="700" fill="#e31b23">YOU SUCCEED.</text>
+<text x="110" y="620" font-family="Arial" font-size="28" fill="#cbd5e1">Custom apparel for brands, teams, institutions and businesses.</text>
+</svg>

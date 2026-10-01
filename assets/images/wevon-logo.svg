@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180">
+  <rect width="520" height="180" fill="#081522"/>
+  <circle cx="92" cy="90" r="66" fill="none" stroke="#e31b23" stroke-width="6"/>
+  <path d="M48 102 L82 62 L97 79 L111 47 L139 102 L116 123 L93 101 L71 125 Z" fill="#e31b23"/>
+  <text x="180" y="86" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" letter-spacing="12" fill="#f3ba2f">WEVON</text>
+  <text x="184" y="120" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="7" fill="#ffffff">APPAREL</text>
+  <text x="184" y="146" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="3" fill="#c7d0d9">WE DESIGN • WE PRODUCE • YOU SUCCEED</text>
+</svg>
