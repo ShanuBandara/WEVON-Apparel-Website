@@ -54,3 +54,10 @@ The official WEVON logo has now been added as `assets/images/wevon-logo.png` and
 - Replaced the booklet-based hero slider visuals with 4 custom generated slider images designed specifically for the website.
 - Added premium left/right slider arrows.
 - Improved the hero slider styling with stronger overlay, smoother visuals, and a more premium homepage feel.
+
+
+## v6 updates
+- Replaced the earlier placeholder catalogue visuals with realistic generated apparel images.
+- Removed the previous "LOGO APPLIED" artwork/badge by replacing the old placeholder product renders.
+- Updated the catalogue image set so each category now has a more realistic product-style visual.
+- Reused the polo image for Corporate Uniforms and the customized T-shirt image for Custom Bulk Orders.
