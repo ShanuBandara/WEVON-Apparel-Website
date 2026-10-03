@@ -61,3 +61,10 @@ The official WEVON logo has now been added as `assets/images/wevon-logo.png` and
 - Removed the previous "LOGO APPLIED" artwork/badge by replacing the old placeholder product renders.
 - Updated the catalogue image set so each category now has a more realistic product-style visual.
 - Reused the polo image for Corporate Uniforms and the customized T-shirt image for Custom Bulk Orders.
+
+
+## v7 updates
+- "Get a Quote" now opens an on-site quotation form instead of immediately opening WhatsApp.
+- Required fields: Name, Phone/WhatsApp, Email, Product, Quantity, Required Date, and Printing or Embroidery.
+- Optional fields: Company/Organization and Additional Requirements.
+- Submitting the form opens WhatsApp to WEVON Apparel with all completed quotation details included in the message.

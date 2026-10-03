@@ -224,3 +224,152 @@ footer{background:#03101a;color:#aeb9c4;padding:34px 0}.footer{display:flex;just
   .slider-prev{left:12px}
   .slider-next{right:12px}
 }
+
+
+/* Quote request modal */
+body.quote-modal-open{
+  overflow:hidden;
+}
+.quote-modal{
+  position:fixed;
+  inset:0;
+  z-index:200;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.quote-modal.open{
+  display:flex;
+}
+.quote-modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(3,10,17,.76);
+  backdrop-filter:blur(6px);
+}
+.quote-modal-dialog{
+  position:relative;
+  z-index:1;
+  width:min(860px,100%);
+  max-height:calc(100vh - 48px);
+  overflow:auto;
+  background:#fff;
+  border-radius:28px;
+  padding:36px;
+  box-shadow:0 35px 100px rgba(0,0,0,.38);
+}
+.quote-modal-close{
+  position:absolute;
+  top:16px;
+  right:18px;
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:50%;
+  background:#f0f2f5;
+  color:#17212b;
+  font-size:28px;
+  line-height:1;
+  cursor:pointer;
+}
+.quote-modal-close:hover{
+  background:#e31b23;
+  color:#fff;
+}
+.quote-modal-header{
+  padding-right:46px;
+  margin-bottom:26px;
+}
+.quote-modal-header h2{
+  font-size:clamp(32px,5vw,48px);
+  margin-bottom:10px;
+}
+.quote-modal-header p{
+  color:#687581;
+  line-height:1.6;
+  margin:0;
+}
+.quote-form{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.quote-field{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.quote-field-full{
+  grid-column:1 / -1;
+}
+.quote-field label{
+  font-size:14px;
+  font-weight:800;
+  color:#17212b;
+}
+.quote-field label span{
+  color:#e31b23;
+}
+.quote-field label small{
+  font-size:12px;
+  color:#7a8792;
+  font-weight:600;
+  margin-left:6px;
+}
+.quote-field input,
+.quote-field select,
+.quote-field textarea{
+  width:100%;
+  border:1px solid #d9e0e6;
+  border-radius:13px;
+  padding:13px 14px;
+  font:inherit;
+  color:#17212b;
+  background:#fff;
+  outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+.quote-field textarea{
+  resize:vertical;
+  min-height:110px;
+}
+.quote-field input:focus,
+.quote-field select:focus,
+.quote-field textarea:focus{
+  border-color:#e31b23;
+  box-shadow:0 0 0 4px rgba(227,27,35,.10);
+}
+.quote-form-note{
+  color:#7a8792;
+  font-size:12px;
+}
+.quote-form-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:2px;
+}
+.quote-cancel-btn{
+  background:#eef1f4;
+  color:#17212b;
+}
+.quote-cancel-btn:hover{
+  background:#e1e5e9;
+}
+@media(max-width:700px){
+  .quote-modal{
+    padding:12px;
+  }
+  .quote-modal-dialog{
+    padding:28px 18px 22px;
+    border-radius:22px;
+    max-height:calc(100vh - 24px);
+  }
+  .quote-form{
+    grid-template-columns:1fr;
+  }
+  .quote-field-full{
+    grid-column:auto;
+  }
+}

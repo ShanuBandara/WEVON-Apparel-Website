@@ -173,3 +173,97 @@ document.querySelectorAll('.navlinks a').forEach(a => a.addEventListener('click'
   showSlide(0);
   startAuto();
 })();
+
+
+// Quote form modal and WhatsApp message generation
+(function() {
+  const modal = document.getElementById('quote-modal');
+  const openButton = document.getElementById('open-quote-modal');
+  const form = document.getElementById('quote-form');
+  const closeButtons = document.querySelectorAll('[data-close-quote-modal]');
+  const firstField = document.getElementById('quote-name');
+  const requiredDate = document.getElementById('quote-date');
+  const wevonWhatsapp = '94703503912';
+
+  if (!modal || !openButton || !form) return;
+
+  // Do not allow selecting a date in the past.
+  if (requiredDate) {
+    const today = new Date();
+    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+      .toISOString()
+      .split('T')[0];
+    requiredDate.min = localToday;
+  }
+
+  function openModal() {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('quote-modal-open');
+    setTimeout(() => firstField && firstField.focus(), 50);
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('quote-modal-open');
+    openButton.focus();
+  }
+
+  openButton.addEventListener('click', openModal);
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    const formData = new FormData(form);
+
+    const name = formData.get('name').trim();
+    const company = formData.get('company').trim();
+    const phone = formData.get('phone').trim();
+    const email = formData.get('email').trim();
+    const product = formData.get('product').trim();
+    const quantity = formData.get('quantity').trim();
+    const dateValue = formData.get('requiredDate').trim();
+    const decoration = formData.get('decoration').trim();
+    const requirements = formData.get('requirements').trim();
+
+    let formattedDate = dateValue;
+    if (dateValue) {
+      const [year, month, day] = dateValue.split('-');
+      formattedDate = `${day}/${month}/${year}`;
+    }
+
+    const messageLines = [
+      'Hi WEVON Apparel, I would like to request a quotation.',
+      '',
+      `Name: ${name}`,
+      ...(company ? [`Company/Organization: ${company}`] : []),
+      `Phone/WhatsApp: ${phone}`,
+      `Email: ${email}`,
+      `Product: ${product}`,
+      `Quantity: ${quantity}`,
+      `Required Date: ${formattedDate}`,
+      `Printing or Embroidery: ${decoration}`,
+      ...(requirements ? [`Additional Requirements: ${requirements}`] : []),
+      '',
+      'Please let me know the quotation and any additional details required.'
+    ];
+
+    const whatsappUrl =
+      `https://wa.me/${wevonWhatsapp}?text=${encodeURIComponent(messageLines.join('\n'))}`;
+
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  });
+})();
